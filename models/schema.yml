@@ -20,8 +20,8 @@
            - name: products_id
              description: If for each disctinct products and primary key to products table
              tests:
-                - unique
-                - not_null
+               - unique
+               - not_null
            - name: revenue
              description: ammount of turnover
            - name: quantity
