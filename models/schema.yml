@@ -10,6 +10,11 @@
          identifier: raw_gz_sales
          description: sales of Greenweez / we have on row per product_id found in each orders_id
          columns:
+           - name: primary_key
+             description: primary key
+             tests:
+               - unique
+               - not_null
            - name: date_date
              description: date of purchase
            - name: orders_id
