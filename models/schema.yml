@@ -18,7 +18,7 @@
                - unique
                - not_null
            - name: products_id
-             description: If for each disctinct product and primary key to product table
+             description: If for each disctinct products and primary key to products table
              tests:
                 - unique
                 - not_null
@@ -28,22 +28,22 @@
              description: number of products
        - name: product
          identifier: stg_raw__product
-         description: table to descript price for each product
+         description: table to descript price for each products
          columns:
            - name: products_id
-             description: Id for each product and foreign key to sales
+             description: Id for each products and foreign key to sales
              tests:
                - unique
                - not_null
            - name: purchase_price
-             description: price to each distinct product
+             description: price to each distinct products
                
        - name: ship
          identifier: stg_raw__ship
          description: table to descript cost for shipping
          columns:
            - name: orders_id
-             description: id for each orders Foreign key to dales table
+             description: id for each orders Foreign key to sales table
              tests:
                - unique
                - not_null
