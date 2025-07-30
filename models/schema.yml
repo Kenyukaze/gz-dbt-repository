@@ -127,7 +127,6 @@
             description: number of impressions
           - name: click
             description: number of clicks
-
       - name: campaigns
         identifier: int_campaigns
         description: data with all differents ads
@@ -147,5 +146,5 @@
           - name: click
             description: number of clicks
         tests:
-          - unique:
-              column_name: "(date_date || '-' || campaign_key)"
+               - unique:
+                  column_name: "(date_date || '-' || campaign_key)"
