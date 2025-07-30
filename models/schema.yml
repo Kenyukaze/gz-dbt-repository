@@ -107,7 +107,7 @@
           - name: impression
             description: number of impressions
           - name: click
-            description: number of clicks
+            description: number of click
 
       - name: facebook
         identifier: raw_gz_facebook
@@ -127,3 +127,29 @@
             description: number of impressions
           - name: click
             description: number of clicks
+
+      - name: campaigns
+        identifier: int_campaigns
+        description: data with all differents ads
+        columns:
+          - name: date_date
+            description: date
+          - name: paid_source
+            description: fournisseur
+            tests:
+              - not_null
+          - name: campaign_key
+            description: id for campaign
+          - name: campaign_name
+            description: name of the campaign
+            tests:
+              - not_null
+          - name: ad_cost
+            description: cost of the campaign
+          - name: impression
+            description: number of impressions
+          - name: click
+            description: number of clicks
+        tests:
+          - unique:
+              column_name: "(date_date || '-' || campaign_key)"
