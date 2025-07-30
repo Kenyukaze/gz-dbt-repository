@@ -135,10 +135,14 @@
             description: date
           - name: paid_source
             description: fournisseur
+            tests:
+              - not_null
           - name: campaign_key
             description: id for campaign
           - name: campaign_name
             description: name of the campaign
+            tests:
+              - not_null
           - name: ad_cost
             description: cost of the campaign
           - name: impression
