@@ -14,7 +14,7 @@ SUM(shipping_fee) AS monthly_shipping_fee,
 SUM(logcost) AS monthly_logcost,
 SUM(ship_cost) AS monthly_ship_cost
 FROM {{ ref(int_campaigns)}}
-FULL OUTER JOIN {{ (finance_days)}}
+FULL OUTER JOIN {{ ref(finance_days)}}
     USING (date_date)
 GROUP BY date_month
 ORDER BY date_date DESC
